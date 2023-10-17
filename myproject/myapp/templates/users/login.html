@@ -1,0 +1,25 @@
+<!-- login.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                
+                <input type="submit" value="Login">
+            </form>
+
+            <div class="separator">
+                <p>Join Now <a href="{% url 'register' %}">Register</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
